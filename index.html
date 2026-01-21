@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekxxy Gaming | Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <div class="logo-container">
+                <img src="Trekxxy.png" alt="Trekxxy Gaming Logo" class="nav-logo">
+                <div class="brand-info">
+                    <span class="logo-text">TREKXXY GAMING</span>
+                    <span class="domain-text">www.trekxxygaming.com</span> 
+                </div>
+            </div>
+        </div>
+        
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="list.html">List Game</a></li> 
+            <li><a href="request.html">Request Game</a></li>
+            <li><a href="tamat.html">Game Tamat</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <section id="specs">
+        <h1 class="section-title">💻 Spesifikasi PC / Laptop</h1>
+        <div class="spec-container">
+            <div class="spec-box">
+                <div class="spec-item"><strong>OS:</strong> Windows 11 Pro</div>
+                <div class="spec-item"><strong>CPU:</strong> Intel Core i7-12700K</div>
+                <div class="spec-item"><strong>GPU:</strong> NVIDIA RTX 3070 Ti 8GB</div>
+                <div class="spec-item"><strong>RAM:</strong> 32GB DDR4 3600MHz</div>
+                <div class="spec-item"><strong>SSD:</strong> 1TB NVMe Gen4</div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="showcase">
+        <h1>🎮 Daftar Game Akan Dimainkan</h1>
+        
+        <div class="filter-container">
+            <button onclick="filterGenre('all')">Semua</button>
+            <button onclick="filterGenre('Action')">Action</button>
+            <button onclick="filterGenre('RPG')">RPG</button>
+            <button onclick="filterGenre('Sports')">Sports</button>
+            <button onclick="filterGenre('Horror')">Horror</button>
+            <button onclick="filterGenre('FPS')">FPS</button>
+        </div>
+
+        <div id="gameList" class="game-grid"></div>
+    </section>
+
+    <hr>
+
+    <section id="trailers">
+        <h1>📺 Trailer Game Pilihan</h1>
+        <div id="trailerLinks" class="trailer-list">
+            <p>Memuat trailer...</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="live-stream">
+        <h1 class="section-title">📅 Live yang Akan Datang</h1>
+        
+        <div class="live-single-container">
+            <div class="live-status-card">
+                <div class="card-header">
+                    <span class="badge live-badge">🔴 LIVE NOW</span>
+                    <span class="platform-text">YOUTUBE</span>
+                </div>
+                
+                <div class="card-body">
+                    <h2 class="live-title">Sedang Main: Resident Evil Village</h2>
+                    <p class="live-desc">Ayo gabung di stream sekarang, kita tamatin bareng!</p>
+                </div>
+
+                <div class="card-footer">
+                    <a href="https://www.youtube.com/watch?v=K2vN1vW80XU" target="_blank" class="btn-watch-now">
+                        Tonton Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
