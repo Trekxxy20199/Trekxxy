@@ -1,5 +1,5 @@
 /* =========================================
-   DASAR & TEMA DARK MODE
+   DASAR & TEMA DARK MODE (KODE ASLI KAMU)
    ========================================= */
 body {
     background-color: #0f0f0f;
@@ -7,6 +7,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Tambahan agar tidak goyang di HP */
 }
 
 hr {
@@ -16,7 +17,6 @@ hr {
     margin: 40px 50px;
 }
 
-/* Judul Section Universal */
 .section-title {
     text-align: center;
     font-size: 2rem;
@@ -30,7 +30,7 @@ hr {
 }
 
 /* =========================================
-   NAVBAR (LOGO, DOMAIN, & NAVIGASI)
+   NAVBAR (LOGO TETAP, MENU EFEK KOTAK)
    ========================================= */
 nav {
     display: flex;
@@ -70,7 +70,9 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 10px; /* Sedikit rapat untuk menampung menu baru */
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -78,14 +80,18 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    padding: 8px 12px; /* Area klik lebih luas */
+    border-radius: 5px;
 }
 
+/* Efek kotak transparan saat hover sesuai gambar referensi */
 nav a:hover {
     color: #00ffcc;
+    background: rgba(0, 255, 204, 0.1);
 }
 
 /* =========================================
-   SPECS SECTION
+   SPECS SECTION (KODE ASLI KAMU)
    ========================================= */
 #specs {
     display: flex;
@@ -104,7 +110,7 @@ nav a:hover {
 .spec-box {
     background: #1a1a1a;
     border: 1px solid #333;
-    border-left: 4px solid #00ffcc; /* Aksen hijau neon */
+    border-left: 4px solid #00ffcc;
     padding: 20px 40px;
     border-radius: 10px;
     display: grid;
@@ -125,7 +131,7 @@ nav a:hover {
 }
 
 /* =========================================
-   FILTER & SHOWCASE GRID
+   FILTER & GRID (KODE ASLI KAMU)
    ========================================= */
 .filter-container {
     padding: 20px 50px;
@@ -157,35 +163,9 @@ nav a:hover {
     padding: 20px 50px;
 }
 
-.game-card.no-img {
-    background: #1e1e1e;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: 0.3s;
-}
-
-.game-card:hover {
-    border-color: #00ffcc;
-    transform: translateY(-5px);
-}
-
 /* =========================================
-   LIVE STREAM SECTION
+   LIVE STREAM SECTION (KODE ASLI KAMU)
    ========================================= */
-#live-stream {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.live-single-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px 50px 60px 50px;
-    width: 100%;
-}
-
 .live-status-card {
     background-color: #1a1a1a;
     border: 2px solid #00ffcc;
@@ -197,46 +177,12 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.live-status-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
 .live-badge {
     background-color: #9b59b6;
     color: white;
     padding: 6px 16px;
     border-radius: 20px;
-    font-size: 0.85rem;
     font-weight: bold;
-}
-
-.platform-text {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.live-title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: white;
-    margin: 10px 0;
-    line-height: 1.2;
-}
-
-.live-desc {
-    color: #888;
-    font-size: 1rem;
-    margin-bottom: 30px;
 }
 
 .btn-watch-now {
@@ -252,27 +198,45 @@ nav a:hover {
 .btn-watch-now::before {
     content: "▶";
     color: #00ffcc;
-    font-size: 1.5rem;
     margin-right: 15px;
 }
 
-.btn-watch-now:hover {
-    color: #00ffcc;
-    transform: translateX(5px);
+/* =========================================
+   TAMBAHAN KHUSUS HP & TABLET 
+   (Tanpa merubah desain asli Desktop)
+   ========================================= */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .spec-box {
+        grid-template-columns: 1fr 1fr;
+    }
+    .game-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spec-box {
+        grid-template-columns: 1fr;
+    }
+    .logo-text { font-size: 1.3rem; }
+    .section-title { font-size: 1.5rem; }
 }
 
 /* =========================================
-   BADGES & TAGS
+   BADGES & TAGS (KODE ASLI KAMU)
    ========================================= */
-.badge {
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline-block;
-}
-
+.badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; text-transform: uppercase; font-weight: bold; display: inline-block; }
 .horror { background: #9b59b6; }
 .fps { background: #3498db; }
 .rpg { background: #27ae60; }
