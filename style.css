@@ -1,0 +1,280 @@
+/* =========================================
+   DASAR & TEMA DARK MODE
+   ========================================= */
+body {
+    background-color: #0f0f0f;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 40px 50px;
+}
+
+/* Judul Section Universal */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================================
+   NAVBAR (LOGO, DOMAIN, & NAVIGASI)
+   ========================================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: #1a1a1a;
+    border-bottom: 2px solid #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 50px; 
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #00ffcc;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+.domain-text {
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+/* =========================================
+   SPECS SECTION
+   ========================================= */
+#specs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.spec-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.spec-box {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-left: 4px solid #00ffcc; /* Aksen hijau neon */
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.spec-item {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.spec-item strong {
+    color: #00ffcc;
+    margin-right: 5px;
+}
+
+/* =========================================
+   FILTER & SHOWCASE GRID
+   ========================================= */
+.filter-container {
+    padding: 20px 50px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-container button {
+    padding: 8px 20px;
+    border: none;
+    background: #252525;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-container button:hover {
+    background: #00ffcc;
+    color: black;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.game-card.no-img {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    border-color: #00ffcc;
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   LIVE STREAM SECTION
+   ========================================= */
+#live-stream {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.live-single-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 60px 50px;
+    width: 100%;
+}
+
+.live-status-card {
+    background-color: #1a1a1a;
+    border: 2px solid #00ffcc;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    transition: 0.3s;
+}
+
+.live-status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.live-badge {
+    background-color: #9b59b6;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.platform-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.live-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.live-desc {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.btn-watch-now {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-watch-now::before {
+    content: "▶";
+    color: #00ffcc;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.btn-watch-now:hover {
+    color: #00ffcc;
+    transform: translateX(5px);
+}
+
+/* =========================================
+   BADGES & TAGS
+   ========================================= */
+.badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.horror { background: #9b59b6; }
+.fps { background: #3498db; }
+.rpg { background: #27ae60; }
+.action { background: #e74c3c; } 
+.sports { background: #f1c40f; color: black; }
